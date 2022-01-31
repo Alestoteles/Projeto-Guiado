@@ -13,14 +13,14 @@
     <img src= 'assents/img/logo new tab.png'   alt="Logo-newtab" width="125px">
   </header>
   <div class="menu">
-    <a href="./index.html">Listagem</a>
+    <a id="goHome" href="./index.html">Listagem</a>
     <a href="./form.html">Cadastrar</a>
   </div>
  
 
 
   <section>
-    <form class="formulario" >
+    <form class="formulario" onsubmit="testaFormulario(event);" >
 
       <div class="linha-form"> 
       <label class="label-grande" for="name">Nome</label>
@@ -30,7 +30,7 @@
 
       <div class="linha-form"> 
         <label class="label-grande" for="phone">Telefone</label>
-        <input name="phone" id="phone" required type="text"/> 
+        <input name="phone" id="phone" onkeypress="testacampotelefone(event)" onfocus="this.value"  "required type="text"/> 
       </div>
 
 
@@ -38,10 +38,10 @@
       <div class="linha-form exp-line "style="display: flex;">
         <label class="label-grande"> Experiencia previa:</label>
         <div>
-          <input type="radio" name="exp" id="exp-yes"/> 
+          <input type="radio" name="exp" id="exp-yes" value="true"/> 
           <label for="exp-yes">Sim</label>
             <br>
-          <input type="radio", name="exp" id="exp-no">
+          <input type="radio", name="exp" id="exp-no" value="false">
           <label for="exp-no">Não</label>
         </div>
       </div>
@@ -56,7 +56,7 @@
   </section>
 
 
-
+<script src="/js/form.js"></script>
 
 </body>
 </html>
